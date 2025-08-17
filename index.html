@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Health</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#home"
+            ><img
+              src="https://i.pinimg.com/1200x/48/4b/c9/484bc9aca9c3acba6e9adba11e87af98.jpg"
+              alt="Fruit Health Logo"
+          /></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <button
+              class="dropdown-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Choose Fruit
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#apple">Apple</a></li>
+              <li><a href="#banana">Banana</a></li>
+              <li><a href="#orange">Orange</a></li>
+              <li><a href="#strawberry">Strawberry</a></li>
+              <li><a href="#blueberry">Blueberry</a></li>
+              <li><a href="#mango">Mango</a></li>
+              <li><a href="#pineapple">Pineapple</a></li>
+              <li><a href="#grapes">Grapes</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book now</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <!-- Animated background elements -->
+      <div class="hero-bg-element1"></div>
+      <div class="hero-bg-element2"></div>
+
+      <div class="hero-content">
+        <h1>
+          Discover Nature's
+          <span class="hero-title-accent">Superfood</span>
+        </h1>
+        <p>
+          Explore the incredible health benefits of nature's candy and learn why
+          fruits should be an essential part of your daily diet.
+        </p>
+        <a href="#apple" class="scroll-btn">
+          Start Exploring
+          <span class="emoji">🍎</span>
+        </a>
+      </div>
+    </section>
+    <!-- Main Content -->
+
+    <main>
+      <!-- Apple Section -->
+      <section id="apple" class="fruit-section">
+        <div class="container">
+          <div class="fruit-image">
+            <img
+              src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Red Apples"
+            />
+          </div>
+          <div class="fruit-content">
+            <a href="detail.html"> <h2 class="fruit-title">🍎 Apple</h2></a>
+            <p class="fruit-description">
+              Apples are among the most popular and nutritious fruits worldwide.
+              Rich in fiber and antioxidants, they support digestive health and
+              may help reduce the risk of chronic diseases.
+            </p>
+            <ul class="fruit-benefits">
+              <li>High in dietary fiber, promoting healthy digestion</li>
+              <li>
+                Contains quercetin, a powerful antioxidant that supports heart
+                health
+              </li>
+              <li>
+                May help regulate blood sugar levels and support weight
+                management
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banana Section -->
+      <section id="banana" class="fruit-section">
+        <div class="container">
+          <div class="fruit-content">
+            <h2 class="fruit-title">🍌 Banana</h2>
+            <p class="fruit-description">
+              Bananas are nature's perfect energy snack, packed with potassium
+              and natural sugars. They're excellent for athletes and anyone
+              needing quick, sustained energy.
+            </p>
+            <ul class="fruit-benefits">
+              <li>
+                Rich in potassium, essential for heart health and muscle
+                function
+              </li>
+              <li>
+                Natural sugars provide quick energy for workouts and daily
+                activities
+              </li>
+              <li>
+                Contains vitamin B6, supporting brain health and mood regulation
+              </li>
+            </ul>
+          </div>
+          <div class="fruit-image">
+            <img
+              src="https://images.unsplash.com/photo-1603833665858-e61d17a86224?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Yellow Bananas"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Orange Section -->
+      <section id="orange" class="fruit-section">
+        <div class="container">
+          <div class="fruit-image">
+            <img
+              src="https://images.unsplash.com/photo-1547514701-42782101795e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Oranges"
+            />
+          </div>
+          <div class="fruit-content">
+            <h2 class="fruit-title">🍊 Orange</h2>
+            <p class="fruit-description">
+              Oranges are citrus powerhouses loaded with vitamin C and
+              immune-boosting compounds. Their bright flavor and nutritional
+              profile make them perfect for daily health maintenance.
+            </p>
+            <ul class="fruit-benefits">
+              <li>
+                Exceptionally high in vitamin C, boosting immune system function
+              </li>
+              <li>
+                Contains folate, important for DNA synthesis and red blood cell
+                formation
+              </li>
+              <li>
+                Flavonoids support cardiovascular health and reduce inflammation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strawberry Section -->
+      <section id="strawberry" class="fruit-section">
+        <div class="container">
+          <div class="fruit-content">
+            <h2 class="fruit-title">🍓 Strawberry</h2>
+            <p class="fruit-description">
+              Strawberries are delicious, low-calorie fruits packed with vitamin
+              C and antioxidants. They're perfect for supporting skin health and
+              fighting oxidative stress.
+            </p>
+            <ul class="fruit-benefits">
+              <li>
+                More vitamin C per serving than oranges, supporting collagen
+                production
+              </li>
+              <li>
+                Rich in anthocyanins, which may improve cognitive function
+              </li>
+              <li>
+                Low in calories but high in fiber, perfect for weight management
+              </li>
+            </ul>
+          </div>
+          <div class="fruit-image">
+            <img
+              src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Strawberries"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Blueberry Section -->
+      <section id="blueberry" class="fruit-section">
+        <div class="container">
+          <div class="fruit-image">
+            <img
+              src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Blueberries"
+            />
+          </div>
+          <div class="fruit-content">
+            <h2 class="fruit-title">🫐 Blueberry</h2>
+            <p class="fruit-description">
+              Blueberries are often called a "superfood" due to their
+              exceptional antioxidant content. These small berries pack a mighty
+              nutritional punch for brain and heart health.
+            </p>
+            <ul class="fruit-benefits">
+              <li>
+                Highest antioxidant content among common fruits, fighting
+                cellular damage
+              </li>
+              <li>May improve memory and cognitive function as we age</li>
+              <li>
+                Supports heart health by reducing blood pressure and cholesterol
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mango Section -->
+      <section id="mango" class="fruit-section">
+        <div class="container">
+          <div class="fruit-content">
+            <h2 class="fruit-title">🥭 Mango</h2>
+            <p class="fruit-description">
+              Mangoes are tropical treasures rich in vitamins A and C. Their
+              sweet, creamy flesh provides essential nutrients while satisfying
+              your sweet tooth naturally.
+            </p>
+            <ul class="fruit-benefits">
+              <li>High in vitamin A, essential for healthy vision and skin</li>
+              <li>
+                Contains digestive enzymes that aid in breaking down proteins
+              </li>
+              <li>Rich in beta-carotene, supporting immune system function</li>
+            </ul>
+          </div>
+          <div class="fruit-image">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1674382739389-338645e7dd8c?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Fresh Mango"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Pineapple Section -->
+      <section id="pineapple" class="fruit-section">
+        <div class="container">
+          <div class="fruit-image">
+            <img
+              src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Pineapple"
+            />
+          </div>
+          <div class="fruit-content">
+            <h2 class="fruit-title">🍍 Pineapple</h2>
+            <p class="fruit-description">
+              Pineapples are tropical fruits containing unique enzymes and high
+              levels of vitamin C. They're excellent for digestion and have
+              natural anti-inflammatory properties.
+            </p>
+            <ul class="fruit-benefits">
+              <li>Contains bromelain, an enzyme that aids protein digestion</li>
+              <li>
+                High manganese content supports bone health and metabolism
+              </li>
+              <li>
+                Anti-inflammatory properties may reduce recovery time after
+                exercise
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grapes Section -->
+      <section id="grapes" class="fruit-section">
+        <div class="container">
+          <div class="fruit-content">
+            <h2 class="fruit-title">🍇 Grapes</h2>
+            <p class="fruit-description">
+              Grapes are small but mighty fruits containing resveratrol and
+              other powerful compounds. They support heart health and may have
+              anti-aging properties.
+            </p>
+            <ul class="fruit-benefits">
+              <li>
+                Rich in resveratrol, which may support heart health and
+                longevity
+              </li>
+              <li>
+                Contains powerful antioxidants that protect against cellular
+                damage
+              </li>
+              <li>
+                Natural compounds may help regulate blood pressure and
+                cholesterol
+              </li>
+            </ul>
+          </div>
+          <div class="fruit-image">
+            <img
+              src="https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Fresh Grapes"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with ❤️ by Kritish | © 2025</p>
+    </footer>
+  </body>
+</html>

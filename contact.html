@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - FruitWise</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#home"
+            ><img
+              src="https://i.pinimg.com/1200x/48/4b/c9/484bc9aca9c3acba6e9adba11e87af98.jpg"
+              alt="Fruit Health Logo"
+          /></a>
+        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <button
+              class="dropdown-toggle"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Choose Fruit
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#apple">Apple</a></li>
+              <li><a href="#banana">Banana</a></li>
+              <li><a href="#orange">Orange</a></li>
+              <li><a href="#strawberry">Strawberry</a></li>
+              <li><a href="#blueberry">Blueberry</a></li>
+              <li><a href="#mango">Mango</a></li>
+              <li><a href="#pineapple">Pineapple</a></li>
+              <li><a href="#grapes">Grapes</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book now</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>📞 Contact Us</h1>
+        <p>
+          Get in touch with us! We'd love to hear from you and answer any
+          questions about healthy nutrition and fruit benefits.
+        </p>
+      </div>
+    </section>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h2 class="section-title">Send us a Message</h2>
+            <form>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a topic</option>
+                  <option value="nutrition">Nutrition Questions</option>
+                  <option value="recipes">Recipe Suggestions</option>
+                  <option value="health">Health Benefits</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us what's on your mind..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">Send Message 📨</button>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h2 class="section-title">Get in Touch</h2>
+
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-content">
+                <h3>Address</h3>
+                <p>
+                  123 Healthy Street<br />Nutrition District<br />Wellness City,
+                  WC 12345
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-content">
+                <h3>Phone</h3>
+                <p>+1 (555) 123-FRUIT<br />+1 (555) 123-3784</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">✉️</div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p>hello@fruitwise.com<br />support@fruitwise.com</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🕒</div>
+              <div class="info-content">
+                <h3>Business Hours</h3>
+                <p>
+                  Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM -
+                  4:00 PM<br />Sunday: Closed
+                </p>
+              </div>
+            </div>
+
+            <div class="map-placeholder">🗺️ Interactive Map Coming Soon</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

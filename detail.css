@@ -1,0 +1,580 @@
+:root {
+  --background-light: #fefae0;
+  --background-green: #e8f5e9;
+  --primary-green: #81c784;
+  --primary-green-dark: #66bb6a;
+  --accent-orange: #ff7043;
+  --accent-yellow: #ffeb3b;
+  --text-dark: #333;
+  --text-medium: #555;
+  --text-dark-transparent: rgba(51, 51, 51, 0.8);
+  --white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.95);
+  --black-transparent: rgba(0, 0, 0, 0.1);
+  --footer-green: #4caf50;
+  --shadow-dark: rgba(0, 0, 0, 0.1);
+  --shadow-darker: rgba(0, 0, 0, 0.4);
+  --glow-green: rgba(129, 199, 132, 0.5);
+  --glow-green-light: rgba(129, 199, 132, 0.3);
+  --glow-green-dark: rgba(129, 199, 132, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--background-light) 0%,
+    var(--background-green) 100%
+  );
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar {
+  background-color: var(--white-transparent);
+  padding: 0.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--shadow-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover,
+.logo a:focus {
+  color: var(--accent-orange);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-menu li {
+  margin: 0 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+  color: var(--white);
+  background-color: var(--primary-green);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  color: var(--text-dark);
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  color: var(--white);
+  background-color: var(--primary-green);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0 8px 16px var(--shadow-darker);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background-color: var(--background-green);
+  color: var(--primary-green-dark);
+}
+
+/* Book Now Button */
+.book-now-btn {
+  background-color: var(--accent-orange);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.book-now-btn:hover,
+.book-now-btn:focus {
+  background-color: var(--primary-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--glow-green-light);
+}
+
+/* Hamburger Menu (Pure CSS) */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 99;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-dark);
+  margin: 2px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-toggle:checked ~ .nav-menu {
+  display: flex;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    width: 80%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: var(--white);
+    box-shadow: -4px 0 8px var(--shadow-dark);
+    padding: 2rem 1rem;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav-toggle:checked ~ .nav-menu {
+    display: flex;
+    right: 0;
+  }
+
+  .nav-menu li {
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: var(--background-light);
+    margin: 0.5rem 1rem;
+  }
+
+  .book-now-btn {
+    margin: 1rem auto;
+    display: none;
+    text-align: center;
+    width: fit-content;
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0;
+  text-align: center;
+  background: linear-gradient(
+    45deg,
+    var(--glow-green-light),
+    var(--background-green)
+  );
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px var(--shadow-dark);
+}
+
+.hero-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px 0;
+  box-shadow: 0 15px 40px var(--shadow-darker);
+  border: 8px solid var(--white);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: var(--text-medium);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Main Content */
+.main-content {
+  padding: 0 0 80px 0;
+}
+
+.section {
+  background: var(--white-transparent);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 30px var(--shadow-dark);
+  backdrop-filter: blur(10px);
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  color: var(--primary-green-dark);
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.section h2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-green),
+    var(--accent-orange)
+  );
+  border-radius: 2px;
+}
+
+/* Nutrition Table */
+.nutrition-table {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px var(--shadow-dark);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+th {
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--primary-green-dark)
+  );
+  color: var(--white);
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+tr:hover {
+  background-color: var(--glow-green-light);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.nutrient-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.amount {
+  color: var(--primary-green-dark);
+  font-weight: 600;
+}
+
+.daily-value {
+  color: var(--accent-orange);
+  font-weight: 500;
+}
+
+.importance {
+  color: var(--text-medium);
+  line-height: 1.5;
+}
+
+.effectiveness {
+  position: relative;
+}
+
+.effectiveness-bar {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.effectiveness-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease;
+}
+
+.effectiveness-high {
+  background: linear-gradient(
+    90deg,
+    var(--primary-green),
+    var(--primary-green-dark)
+  );
+}
+.effectiveness-medium {
+  background: linear-gradient(
+    90deg,
+    var(--accent-yellow),
+    var(--accent-orange)
+  );
+}
+.effectiveness-good {
+  background: linear-gradient(
+    90deg,
+    var(--primary-green-dark),
+    var(--accent-orange)
+  );
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.benefit-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px var(--shadow-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid var(--primary-green);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px var(--glow-green);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-title {
+  font-size: 1.3rem;
+  color: var(--primary-green-dark);
+  margin-bottom: 15px;
+}
+
+.benefit-description {
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .section {
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  th,
+  td {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .nutrition-table {
+    font-size: 0.85rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+  }
+}
+
+/* Animation for effectiveness bars */
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+.effectiveness-fill {
+  animation: fillBar 1.5s ease-out 0.5s both;
+}
